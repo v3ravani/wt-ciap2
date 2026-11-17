@@ -336,12 +336,14 @@ kbd {
 
 /* ==================== 5. FOOTER ==================== */
 .app-footer {
-    height: 42px;
+    min-height: 42px;
+    padding: 10px 20px;
     background-color: #ffffff;
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 0.78rem;
     color: var(--text-muted);
 }
