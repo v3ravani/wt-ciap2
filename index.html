@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events and Event Handling | Web Technology II</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== COMPACT HEADER ==================== -->
+    <header class="app-header">
+        <div class="header-inner">
+            <div class="title-area">
+                <h1 class="main-title">JavaScript Events and Event Handling</h1>
+                <span class="title-divider">/</span>
+                <p class="subtitle">Interactive Simulation &amp; Form Validation</p>
+            </div>
+            <div class="header-tag">Web Technology II | CIAP</div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="page-body">
+
+        <!-- LEFT PANEL: JavaScript Events Simulation -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2 class="panel-title">JavaScript Events Simulation</h2>
+                <span class="panel-note">Practical Event Demonstrations</span>
+            </div>
+
+            <div class="events-list">
+
+                <!-- A. Click Event -->
+                <div class="demo-row">
+                    <div class="demo-info">
+                        <span class="event-tag">Click Event</span>
+                        <p class="demo-instruction">Click the button to change its color to green.</p>
+                    </div>
+                    <div class="demo-action">
+                        <button type="button" id="clickBtn" class="action-btn">Click Me</button>
+                    </div>
+                </div>
+
+                <!-- B. Mouseover Event -->
+                <div class="demo-row">
+                    <div class="demo-info">
+                        <span class="event-tag">Mouseover Event</span>
+                        <p class="demo-instruction">Hover over the button to change its background color.</p>
+                    </div>
+                    <div class="demo-action">
+                        <button type="button" id="mouseoverBtn" class="action-btn">Hover Over Me</button>
+                    </div>
+                </div>
+
+                <!-- C. Double Click Event -->
+                <div class="demo-row">
+                    <div class="demo-info">
+                        <span class="event-tag">Double Click Event</span>
+                        <p class="demo-instruction">Double-click the button quickly to change color.</p>
+                    </div>
+                    <div class="demo-action">
+                        <button type="button" id="dblClickBtn" class="action-btn">Double Click Me</button>
+                    </div>
+                </div>
+
+                <!-- D. Keyboard Event -->
+                <div class="demo-row demo-row-vertical">
+                    <div class="demo-info">
+                        <span class="event-tag">Keyboard Event</span>
+                        <p class="demo-instruction">Press V on your keyboard to change the color.</p>
+                    </div>
+                    <div class="demo-action full-width">
+                        <div id="keyboardBox" class="key-box">
+                            <span class="key-label">Press <kbd>V</kbd> on Keyboard</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RIGHT PANEL: Form Validation -->
+        <section class="panel">
+            <div class="panel-header">
+                <h2 class="panel-title">Form Validation</h2>
+                <span class="panel-note">Client-Side Validation &amp; Error Handling</span>
+            </div>
+
+            <form id="validationForm" class="validation-form" novalidate>
+
+                <!-- Full Name -->
+                <div class="form-field">
+                    <label for="fullName">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName" 
+                        placeholder="e.g. John Doe"
+                        autocomplete="off"
+                    >
+                    <span class="field-error" id="nameError"></span>
+                </div>
+
+                <!-- Email Address -->
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="e.g. john@example.com"
+                        autocomplete="off"
+                    >
+                    <span class="field-error" id="emailError"></span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="10-digit mobile number" 
+                        maxlength="10"
+                        autocomplete="off"
+                    >
+                    <span class="field-error" id="phoneError"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn" class="primary-btn">Submit Form</button>
+
+                <!-- Success Alert -->
+                <div id="successMessage" class="success-banner" style="display: none;">
+                    &#10004; Form submitted successfully! All inputs passed validation.
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="app-footer">
+        <span>Web Technology II &bull; Practical Simulation &bull; CIAP</span>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
